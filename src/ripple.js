@@ -1,0 +1,22 @@
+document.addEventListener('DOMContentLoaded', () => {
+
+    const buttons = document.querySelectorAll('button');
+    buttons.forEach(btn => {
+      btn.addEventListener('click', function (e) {
+        alert("sdfs");
+        
+        let x = e.clientX - e.target.offsetLeft;
+        let y = e.clientY - e.target.offsetTop;
+        
+        let ripples = document.createElement('span');
+        ripples.style.left = x + 'px';
+        ripples.style.top = y + 'px';
+        this.appendChild(ripples);
+        
+        setTimeout(() => {
+          ripples.remove()
+        },1000);
+      });
+    });
+    
+})

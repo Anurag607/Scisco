@@ -1,0 +1,36 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200&display=swap');
+
+@mixin align ($dir: column) {
+    display: flex;
+    flex-direction: $dir;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    font-family: 'Poppins', sans-serif;
+    cursor: default;
+}
+
+body,html {
+    width: 100vw;
+    height: 100vh;
+    background: #fff;
+}
+
+::-webkit-scrollbar {
+    width: 0;
+}
+
+.App {
+    width: 100vw;
+    height: 100vh;
+    @include align($dir: column);
+}
+
+@import "./preloader.scss";
+
+@import "./dashboard.scss";
